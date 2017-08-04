@@ -1,1 +1,179 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;letter-spacing:1px}.clearfix:after{content:".";display:block;height:0;clear:both;overflow:hidden}body{background-color:#ffffff}a{color:black}li{list-style-type:none}@font-face{font-family:"Charter";src:url("../fonts/charterc.otf");font-weight:normal;font-style:normal}@font-face{font-family:"OpenSansSemibold";src:url("../fonts/OpenSansSemibold.ttf");font-weight:normal;font-style:normal}@font-face{font-family:"DroidSerifRegular";src:url("../fonts/DroidSherifRegular.ttf");font-weight:normal;font-style:normal}@font-face{font-family:"OpenSansItalic";src:url("../fonts/OpenSansItalic.ttf");font-weight:normal;font-style:normal}@font-face{font-family:"OpenSansRegular";src:url("../fonts/OpenSansRegular.ttf");font-weight:normal;font-style:normal}@font-face{font-family:"DroidSerifBoldItalic";src:url("../fonts/DroidSerifBoldItalic.ttf");font-weight:normal;font-style:normal}.header{background-image:url("../images/boeing.jpg");background-position:center;background-repeat:no-repeat}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  letter-spacing: 1px; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden; }
+
+body {
+  background-color: #ffffff; }
+
+a {
+  color: black; }
+
+li {
+  list-style-type: none; }
+
+@font-face {
+  font-family: "Charter";
+  src: url("../fonts/charterc.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSansSemibold";
+  src: url("../fonts/OpenSansSemibold.ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "DroidSerifRegular";
+  src: url("../fonts/DroidSherifRegular.ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSansItalic";
+  src: url("../fonts/OpenSansItalic.ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSansRegular.ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "DroidSerifBoldItalic";
+  src: url("../fonts/DroidSerifBoldItalic.ttf");
+  font-weight: normal;
+  font-style: normal; }
+.header {
+  background-image: url("../images/boeing.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.header_content {
+  display: flex;
+  margin: 30px 0;
+  font-size: 18px;
+  color: white;
+  justify-content: space-between; }
+
+.header_logo,
+.header_contact {
+  display: inline-flex;
+  align-items: center; }
+  .header_logo > div,
+  .header_contact > div {
+    margin-right: 25px; }
+    .header_logo > div:last-child,
+    .header_contact > div:last-child {
+      margin: 0; }
+
+.header_logo img {
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 10px; }
+
+.header_email,
+.header_tel {
+  display: inline-flex;
+  align-items: flex-end;
+  font-size: 12px; }
+
+.header_email::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/envelope.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px; }
+
+.header_tel::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/call-answer.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px; }
+
+.header_basic-cont {
+  font-family: "OpenSansRegular";
+  margin: 120px auto;
+  text-align: center;
+  color: white;
+  font-size: 22px; }
+  .header_basic-cont img {
+    margin: 15px; }
+  .header_basic-cont > div {
+    margin: 20px 0; }
+
+.sub_cont {
+  font-size: 12px;
+  margin-top: 20px; }
+
+.header_button a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #aa9fa2;
+  color: #e4e0e0;
+  margin-right: 10px;
+  -webkit-transition: border, color 500ms ease-out;
+  -moz-transition: border, color 500ms ease-out;
+  -o-transition: border, color 500ms ease-out;
+  transition: border,color 500ms ease-out; }
+  .header_button a:last-child {
+    margin: 0; }
+  .header_button a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid black;
+    color: white; }
+
+.header_standart {
+  text-align: center;
+  margin-bottom: 40px; }
+  .header_standart div {
+    display: inline-block;
+    margin-right: 20px; }
+    .header_standart div img {
+      max-width: 40px;
+      max-height: 40px; }
+    .header_standart div:last-child {
+      margin-right: 0; }
+
+@media screen and (max-width: 570px) {
+  .header_content {
+    flex-direction: column; }
+
+  .header_contact {
+    margin: 15px 0;
+    justify-content: center; } }
+@media screen and (max-width: 340px) {
+  .header_button a {
+    width: 100%;
+    margin-bottom: 10px; } }
+
+/*# sourceMappingURL=style.css.map */
