@@ -4,8 +4,8 @@
 
 
 .header {
-	background-image: url("../images/boeing.jpg");
-	background-position: center;
+	background-image: url("../images/background.jpg");
+	background-position: 0 31%;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -97,10 +97,10 @@
 		color: #e4e0e0;
 		margin-right: 10px;
 
-		-webkit-transition : border, color 500ms ease-out;
-		-moz-transition : border, color 500ms ease-out;
-		-o-transition : border, color 500ms ease-out;
-		transition : border,color 500ms ease-out;
+		-webkit-transition : border 500ms ease-out, color 500ms ease-out;
+		-moz-transition : border 500ms ease-out, color 500ms ease-out;
+		-o-transition : border 500ms ease-out, color 500ms ease-out;
+		transition : border 500ms ease-out, color 500ms ease-out;
 		&:last-child {
 			margin: 0;
 		}
@@ -129,7 +129,98 @@
 	}
 }
 
+//about pmi 
+.about_pmi {
+	background-color: #557bc6;
+	color: #ffffff;
+}
 
+.about_pmi-content {
+	padding: 90px 0;
+	width: 70%;
+	margin: 0 auto;
+
+	p {
+		margin: 5px 0;
+		
+		& + p {
+			margin-top: 10px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.about_pmi-content .header_button { text-align: center; margin-top: 40px; }
+
+.quote_author {
+	text-align: right;
+}
+
+//precision machine
+.precision_mach {
+	background-image: url("../images/NEW-3.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+.precision_content {
+	margin: 120px 0;
+	text-align: center;
+	color: white;
+}
+
+.precision_title {
+	margin: 20px 0;
+	display: inline-flex;
+	align-items: center;
+	font-size: 24px;
+	img {
+		max-width: 60px;
+		max-height: 60px;
+		margin-right: 10px;
+	}
+}
+
+.precision_info {
+	font-size: 14px;
+	width: 80%;
+	margin: 0 auto;
+	text-align: justify;
+	p {
+		margin: 15px 0;
+	}
+}
+
+
+//about 
+.about {
+	background-image: url("../images/about.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.about .precision_content {
+	margin-top: 55px;
+}
+
+.about .precision_info {
+	width: 100%;
+	padding: 0 50px;
+}
+//media
+
+@media screen and (max-width: 992px) {
+	
+	.about_pmi-content { width: 75%; }
+}
+
+@media screen and (max-width: 768px) {
+	.header {
+		background-position: 10% 50%;
+	}
+}
 
 @media screen and (max-width: 570px) {
 	.header_content {
@@ -139,6 +230,8 @@
 		margin: 15px 0;
 		justify-content: center;
 	}
+
+	.about_pmi-content { width: 100%; }
 }
 
 @media screen and (max-width: 340px) {
@@ -150,3 +243,6 @@
 	}
 
 }
+
+
+
