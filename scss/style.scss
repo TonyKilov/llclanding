@@ -209,11 +209,58 @@
 	width: 100%;
 	padding: 0 50px;
 }
+
+//statist
+.statist {
+	background-color: #64a45f;
+}
+
+.statist_content-wrap {
+	margin: 40px 0;
+	display: flex;
+	justify-content:space-between;
+	flex-wrap: wrap;
+}
+
+.statist_info {
+	width: 65%;
+	color: white;
+	display: inline-flex;
+	justify-content: space-between;
+	& + div {
+		width: 35%;
+		text-align: center;
+	}
+}
+
+.info-content {
+	display: flex;
+	width: 19%;
+    flex-direction: column;
+    font-size: 30px;
+    line-height: 1;
+    align-items: baseline;
+    flex-wrap: wrap;
+	span {
+		&:last-child {
+			font-size: 15px;
+		}
+	}
+}
+
 //media
 
 @media screen and (max-width: 992px) {
 	
 	.about_pmi-content { width: 75%; }
+
+	.statist_info {
+		width: 100%;
+		& + div {
+			width:100%;
+			margin: 25px 0;
+		}
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -223,7 +270,8 @@
 }
 
 @media screen and (max-width: 570px) {
-	.header_content {
+	.header_content,
+	.statist_info {
 		flex-direction: column;
 	}
 	.header_contact {
@@ -232,6 +280,11 @@
 	}
 
 	.about_pmi-content { width: 100%; }
+
+	.info-content {
+		margin: 15px 0;
+		width: auto;
+	}
 }
 
 @media screen and (max-width: 340px) {
