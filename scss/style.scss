@@ -12,7 +12,7 @@
 .header_content {
 	display: flex;
 	margin: 30px 0;
-	font-size: 18px;
+	font-size: 22px;
 	color: white;
 	justify-content: space-between;
 }
@@ -39,9 +39,11 @@
 
 .header_email,
 .header_tel {
+	font-family:"FolioLight";
 	display: inline-flex;
 	align-items: flex-end;
-	font-size: 12px;
+	font-size: 18px;
+	line-height: 1;
 }
 
 .header_email {
@@ -81,6 +83,9 @@
 	}
 	& > div {
 		margin: 20px 0;
+		p {
+			font-size: 100px;
+		}
 	}
 }
 
@@ -91,6 +96,7 @@
 
 .header_button {
 	a {
+		font-family: "FolioLight";
 		display: inline-block;
 		padding: 10px 20px;
 		border: 1px solid #aa9fa2;
@@ -276,14 +282,19 @@
 	width: 50%;
 	display: inline-block;
 	float: left;
+	&:first-child {
+		padding-right: 40px;
+	}
 	&:last-child {
 		margin: 22px 0;
+		padding-left: 15%;
 	}
 }
 
 .form-title {
 	padding-left: 75px;
 	position: relative;
+	margin-bottom: 15px;
 	p {
 		font-size: 14px;
 		&:first-child {
@@ -310,7 +321,57 @@
 
 }
 
+.file_man {
+	display: flex;
+    justify-content: space-between;
+	
+	button {
+		position: relative;
+		margin-top: 10px;
+	    padding: 5px 25px;
+	    background-color:#9FD468;
+	    border-width: 0;
+	}
+}
+
+.signature {
+	font-size: 10px;
+	margin-bottom: 15px;
+	label {
+		font-weight: normal;
+	}
+}
+
+.form_basic-input {
+	input {
+		color: black;
+		width: 100%;
+		padding: 10px 10px;
+		margin: 15px 0;
+		color: black;
+		&:last-child {
+			margin-bottom: 30px;
+		}
+	}
+	textarea {
+		color: black;
+		width: 100%;
+		resize: none;
+		margin: 15px 0;
+		padding: 10px 10px;
+	}
+	button {
+
+		background-color: transparent;
+		border-width: 0;
+		border: 1px solid #ffffff;
+		padding: 5px 25px;
+		float: right;
+	}
+}
+
 .address {
+	margin-bottom: 45px;
 	p {
 		font-size: 14px;
 		margin: 10px 0;
@@ -323,6 +384,49 @@
 		}
 	}
 }
+
+.get-quote {
+	margin-top: 50%;
+}
+
+ 
+.button_form input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+}
+
+
+// after footer
+
+.aft_footer {
+	background-color: #0ba14b;
+}
+
+.aft_footer-content {
+	display: flex;
+    justify-content: center;
+    margin: 20px 0;
+	    a {
+	    	margin: 0 15px;
+	    	color: white;
+	    	&:hover {
+	    		text-transform: none;
+	    	}
+	    }
+	    img {
+	    	width: 22px;
+	    	height: 20px;
+	    	margin: 0 15px;
+	    }
+}
+
+
 
 //media
 
@@ -340,6 +444,24 @@
 
 	.form-wrap {
 		width: 100%;
+		padding: 0;
+		&:first-child,
+		&:last-child {
+			padding: 0;
+		}
+	}
+
+	.form_basic-input {
+		button {
+			margin: 0 auto;
+			display:block;
+			width: 25%;
+			float: none;
+		}
+	}
+
+	.get-quote {
+		margin-top: 65px;
 	}
 }
 
@@ -347,9 +469,7 @@
 	.header {
 		background-position: 10% 50%;
 	}
-}
 
-@media screen and (max-width: 570px) {
 	.header_content,
 	.statist_info {
 		flex-direction: column;
@@ -358,6 +478,10 @@
 		margin: 15px 0;
 		justify-content: center;
 	}
+}
+
+@media screen and (max-width: 570px) {
+	
 
 	.about_pmi-content { width: 100%; }
 
@@ -381,5 +505,71 @@
 
 }
 
+
+//checkbox
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+
+
+.checkbox + label {
+  cursor: pointer;
+}
+
+
+
+
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:not(checked) + label {
+  position: relative; 
+  padding: 0 0 0 60px; 
+}
+
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+
+
+.checkbox:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: all .2s; 
+}
+
+
+.checkbox:checked + label:before {
+  background: #9FD468;
+}
+
+
+.checkbox:checked + label:after {
+  left: 26px;
+}
+
+
+.checkbox:focus + label:before {
+  //box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+}
 
 
