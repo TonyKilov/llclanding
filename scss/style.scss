@@ -118,7 +118,8 @@
 		&:last-child {
 			margin: 0;
 		}
-		&:hover {
+		&:hover,
+		&:focus {
 			text-decoration: none;
 			cursor: pointer;
 			border: 1px solid black;

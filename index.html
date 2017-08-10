@@ -45,8 +45,8 @@
 					<p class="sub_cont">Leaders in 5 Axis Milling Technology</p>
 				</div>
 				<div class="header_button">
-					<a href="#">Capabilites</a>
-					<a href="#">Contact</a>
+					<a href="#precision_machining">Capabilites</a>
+					<a href="#contact">Contact</a>
 				</div>
 			</div>
 
@@ -90,14 +90,14 @@
 				</p>
 				
 				<div class="header_button">
-					<a href="#">About PMI</a>
+					<a href="#about">About PMI</a>
 				</div>
 			</div>
 		</div>
 	</section>
 	
 	<!-- section precision PMI -->
-	<section class="precision_mach">
+	<section id="precision_machining" class="precision_mach">
 		<div class="container">
 			<div class="precision_content">
 				<div class="precision_title">
@@ -115,7 +115,7 @@
 	</section>
 	
 	<!-- ABOUT -->
-	<section class="about">
+	<section id="about" class="about">
 		<div class="container">
 			<div class="precision_content">
 				<div class="precision_title">
@@ -153,13 +153,13 @@
 					</div>
 				</div>
 
-				<div class="header_button"><a href="#">About BAM</a></div>
+				<div class="header_button"><a href="http://www.bamenterprisesinc.com/">About BAM</a></div>
 			</div>
 		</div>
 	</section>
 	
 	<!-- contact us -->
-	<section class="contact">
+	<section id="contact" class="contact">
 		<div class="container">
 			<div class="contact_info-wrap">
 				<div class="precision_title">
@@ -177,7 +177,7 @@
 							<p>Let's Talk</p>
 							<p>For inquires email info@pmiindustries.com <br> or fill out the form</p>
 						</div>
-						<form action="">
+						<form id="feedback-form" method="post">
 							
 							<div class="file_man">
 								<div>
@@ -185,15 +185,15 @@
 									<label for="checkbox"></label>
 									</p>
 								</div>
-								<button class="button_form">Browse<input type="file" name=""></button>
+								<button class="button_form">Browse<input type="file" name="file_brows"></button>
 							</div>
 							<p class="signature"><label for="checkbox">Slide for RFQ/file Upload</label></p>
 							
 							<div class="form_basic-input">
-								<input type="text" placeholder="Name">
-								<input type="email" placeholder="Email">
-								<input type="text" placeholder="Company">
-								<textarea placeholder="Note" name="textarea" placeholder="" id="" cols="30" rows="10"></textarea>
+								<input name="Name" type="text" placeholder="Name">
+								<input name="Email" type="email" placeholder="Email">
+								<input name="Company" type="text" placeholder="Company">
+								<textarea name="Note" placeholder="Note" name="textarea" placeholder="" id="" cols="30" rows="10"></textarea>
 								<button type="sublit">Submit</button>
 							</div>
 						</form>
